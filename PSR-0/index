@@ -5,3 +5,11 @@
  * Date: 2018/9/25
  * Time: 20:01
  */
+
+//定义文件目录
+define('BASEDIR', __DIR__);
+include BASEDIR.'/IMooc/Loader.php';
+spl_autoload_register('\\IMooc\\Loader::autoload');
+
+App\Controller\Home\Index::test();
+IMooc\Object::test();
