@@ -11,5 +11,29 @@ define('BASEDIR', __DIR__);
 include BASEDIR.'/IMooc/Loader.php';
 spl_autoload_register('\\IMooc\\Loader::autoload');
 
-App\Controller\Home\Index::test();
-IMooc\Object::test();
+    //链式操作
+    $db=new IMooc\Database();
+    $db->where("id=1")->order("id desc")->limit(10);
+
+    //set,get 魔术方法
+    $obj=new IMooc\Object();
+    $obj->title="hello";
+    echo $obj->title;
+
+    //call魔术方法
+    $obj2=new IMooc\Object();
+    echo $obj2->test("hello", 123);
+
+    $obj3=new IMooc\Object();
+    echo IMooc\Object::test("hello",123);
+
+    //tostring魔术方法
+    $obj4=new IMooc\Object();
+    echo $obj4;
+
+    //invoke魔术方法
+    $obj5=new IMooc\Object();
+    echo $obj5("test");
+
+
+
