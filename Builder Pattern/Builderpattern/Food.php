@@ -11,7 +11,7 @@ class Food{
     public $_two;
     public $_three;
 
-    function CookProcess(){
+    function cookprocess(){
         echo "{$this->_one}";
         echo "{$this->_two}";
         echo "{$this->_three}\n";

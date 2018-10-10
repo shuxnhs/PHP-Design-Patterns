@@ -12,10 +12,10 @@ include BASEDIR.'/IMooc/Loader.php';
 spl_autoload_register('\\IMooc\\Loader::autoload');
 
 
-$phone1=\IMooc\Factory::buyIphone('Iphone');
+$phone1=\IMooc\AbstractFactory::buyIphone('Iphone');
 $phone1->buy();
 
-$phone2=\IMooc\Factory::buyIphone('Huawei');
+$phone2=\IMooc\AbstractFactory::buyIphone('Huawei');
 $phone2->buy();
 
 
